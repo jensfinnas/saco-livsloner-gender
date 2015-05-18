@@ -1,0 +1,159 @@
+.desktop {
+  #container {
+    width: 980px;
+  }
+  #viz, #message {
+    width: 640px;
+  }
+  #nav, #sharing {  
+    width: 266px; 
+  }
+
+  #viz {
+    height: 600px;
+    display: inline-block;
+    float: left;
+  }
+  .shadow {
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(220,220,220,1);
+    -moz-box-shadow: 0 2px 5px 0 rgba(220,220,220,1);
+    box-shadow: 0 2px 5px 0 rgba(220,220,220,1);
+    margin: 5px;
+    padding: 13px;
+
+  }
+
+  /* CHART */
+  .domain {
+    display: none;
+  }
+  .tick:nth-of-type(1) text {
+    display: block;
+  }
+  .bar.fade {
+    opacity: .1;
+  }
+  .bar .value {
+    font-size: 10px;
+    fill: #9B9696;
+  }
+  .bar.fade .value {
+    display: none;
+  }
+  .bar .label, .tick text {
+    font-weight: normal;
+    font-size: 11px;
+    cursor: default;
+  }
+
+  .show-all .bar .value {
+    display: none;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 13px;
+  }
+  /* AUDIO AND STORY */
+  #nav {
+    display: inline-block;
+  }
+  #nav h3, #sharing h3, #message h3 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+  #controls {
+    width: 100%; 
+  }
+  #controls audio { 
+    width: 100%; 
+    display: inline-block;
+  }
+  #story {
+    display: inline-block;
+  }
+  #story .story-text {
+    height: auto;
+    min-height: 0;
+    cursor: pointer;
+    color: #C9C9C9;
+    width: 100% !important; 
+    margin-top: 10px;
+  }
+  #story .story-text.selected {
+    color: white;
+    background-color: #10B0B4;
+  }
+  /* MESSAGE */
+  #footer {
+    clear: both;  
+  }
+
+  #message {
+    display: inline-block;
+    font-family: Georgia;
+    float: left;
+  }
+  #message ul {
+    padding-left: 18px
+  }
+  #message .list-item {
+    margin-bottom: 10px;
+  }
+  
+  #message .number {
+    display: none;
+  }
+  #message .text {
+    display: inline-block;
+    width: 530px;
+  }
+
+  /* SHARING */
+  #sharing {
+    display: inline-block;
+  }
+
+  
+
+
+  /* TOOLTIP */
+  .tooltip {
+    opacity: 1 !important;
+
+  }
+  .tooltip-inner {
+    background-color: white;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;  
+    background: #10B0B4;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(220,220,220,1);
+    -moz-box-shadow: 0 2px 5px 0 rgba(220,220,220,1);
+    box-shadow: 0 2px 5px 0 rgba(220,220,220,1);
+    line-height: 16px;
+
+  }
+  .tooltip > .tooltip-arrow { 
+    border-left-color:#10B0B4 !important; 
+    border-right-color:#10B0B4 !important; 
+  }
+  .tooltip strong {
+    display: block;
+    width:100%;
+    font-size: 20px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+  }
+  /* SOURCE */
+  #source {
+    font-size: 11px;
+    margin-top: 22px;
+    line-height: 12px;
+
+  }
+  #footnote {
+    margin-bottom: 4px;
+  }  
+}

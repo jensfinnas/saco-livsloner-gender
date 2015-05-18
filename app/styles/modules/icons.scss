@@ -1,0 +1,64 @@
+/* ICONS */
+  @font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?-gmsnrv');
+    src:url('fonts/icomoon.eot?#iefix-gmsnrv') format('embedded-opentype'),
+      url('fonts/icomoon.woff?-gmsnrv') format('woff'),
+      url('fonts/icomoon.ttf?-gmsnrv') format('truetype'),
+      url('fonts/icomoon.svg?-gmsnrv#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-twitter:before {
+    content: "\e603";
+  }
+  .icon-facebook:before {
+    content: "\e604";
+  }
+  .icon-headphones:before {
+    content: "\e600";
+  }
+  .icon-bullhorn:before {
+    content: "\e601";
+  }
+  .icon-thumbs-up:before {
+    content: "\e602";
+  }
+  #nav .icon, #sharing .icon, #message .icon {
+    float: left;
+    margin-right: 18px;
+    margin-bottom: 96px;
+    font-size: 28px;
+  }
+  #message .icon {
+    margin-bottom: 120px;
+  }
+
+  #message .number, .share-icon {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    border: 2px solid rgb(85, 85, 85);
+    color: rgb(85, 85, 85);
+    border-radius: 23px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 45px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }

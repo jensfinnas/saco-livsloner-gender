@@ -1,0 +1,74 @@
+.mobile {
+	padding: 15px;
+	font-size: 15px;
+	line-height: 1.5em;
+
+	h3 {
+		margin-top: 16px;
+  		margin-bottom: 4px;
+  		font-size: 20px;
+	}
+
+	.hidden-mobile {
+		display: none;
+	}
+
+	.item {
+		margin-bottom: 5px;
+		border-bottom: 1px solid #CACACA;
+  		padding: 11px 0;
+	
+  		.bar {
+  			height: 4px;
+  			background-color: $theme-color;
+  			display: inline-block; 
+  		}
+
+  		.sentence {
+  			margin-top: 10px;
+  		}
+
+  		$icon-size: 37px;
+  		.share-icon {
+  			width: $icon-size;
+  			height: $icon-size;
+  			line-height: $icon-size;
+  			font-size: $icon-size / 2;
+  			margin-top: 10px;
+  			margin-left: 10px;
+  			margin-right: 0;
+  		}
+	}
+
+	// 
+	
+
+	// Show more/less arrows
+	.toggle-collapse {
+		.show-more {
+			display: block;
+		}
+		.show-less {
+			display: none;
+		}
+	}
+	.toggle-collapse.active {
+		.show-more {
+			display: none;
+		}
+		.show-less {
+			display: block;
+		}
+	}
+
+
+	// STORY
+	#mobile-story {
+		.number {
+			font-size: 28px;
+			font-weight: bold;
+			margin-bottom: 9px;
+		}
+	}
+
+}
