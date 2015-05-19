@@ -24,14 +24,14 @@
     <script id="mobile-chart-item-template" type="text/x-handlebars-template">
       <div class="item" data-value="{{diffPercent}}">
         <div role="tab" id="heading-{{slugify label}}">
-          <div class="toggle-collapse"  data-toggle="collapse" href="#collapse-{{slugify label}}" aria-expanded="true" aria-controls="collapse-{{slugify label}}">
+          <div class="toggle-collapse"  data-toggle="collapse" href=".collapse-{{slugify label}}" aria-expanded="true" aria-controls="collapse-{{slugify label}}">
             <span class="glyphicon glyphicon-chevron-right show-more pull-right" aria-hidden="true"></span>
             <span class="glyphicon glyphicon-chevron-down show-less pull-right" aria-hidden="true"></span>
             {{ label }}: {{ formatPercentDiff diffPercent }}
           </div>
           <div class="bar" style="{{getBarStyle diffPercent}}"></div>
         </div>
-        <div id="collapse-{{slugify label}}" class="collapse sentence" role="tabpanel" aria-labelledby="heading-{{slugify label}}">
+        <div id="collapse-{{slugify label}}" class="collapse sentence collapse-{{slugify label}}" role="tabpanel" aria-labelledby="heading-{{slugify label}}">
           <div class="">
             <a href="https://twitter.com/intent/tweet?text={{getTweet column}}" class="twitter-link">
             <span class="icon-twitter icon share-icon pull-right"></span>
@@ -111,7 +111,7 @@
 
 
         </div>
-        <div id="sharing" class="shadow">
+        <div id="sharing" class="shadow hidden-mobile">
           <span class="icon-thumbs-up icon hidden-mobile"></span>
           <h3 class="text">Dela och berätta om detta om du också vill ha jämställda livslöner</h3>
           <div class="share-icons">
@@ -183,8 +183,8 @@
         <script src="scripts/story.js"></script>
         <script src="scripts/utils.js"></script>
         <!-- endbuild -->
-        <!--<script type="text/javascript" src="//use.typekit.net/zxg8sjd.js"></script>
-        <script type="text/javascript">try { Typekit.load(); } catch (e) { console.log(e); }</script>-->
+        <script type="text/javascript" src="//use.typekit.net/zxg8sjd.js"></script>
+        <script type="text/javascript">try { Typekit.load(); } catch (e) { console.log(e); }</script>
 
         <script>
         app.init();
