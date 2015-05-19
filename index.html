@@ -1,0 +1,57 @@
+<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>saco livsloner gender</title> <meta name=description content=""> <meta name=viewport content="width=device-width"> <link rel="shortcut icon" href=/6df2b309.favicon.ico> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel=stylesheet href=styles/2d9b272a.main.css>  <body> <!--[if lt IE 9]>
+      <p class="browsehappy">Du behöver en nyare browser för att kunna ta del av det här innehållet.</p>
+    <![endif]--> <!-- Template: List item (mobile) --> <script id=mobile-chart-item-template type=text/x-handlebars-template><div class="item" data-value="{{diffPercent}}">
+        <div role="tab" id="heading-{{slugify label}}">
+          <div class="toggle-collapse"  data-toggle="collapse" href=".collapse-{{slugify label}}" aria-expanded="true" aria-controls="collapse-{{slugify label}}">
+            <span class="glyphicon glyphicon-chevron-right show-more pull-right" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-chevron-down show-less pull-right" aria-hidden="true"></span>
+            {{ label }}: {{ formatPercentDiff diffPercent }}
+          </div>
+          <div class="bar" style="{{getBarStyle diffPercent}}"></div>
+        </div>
+        <div id="collapse-{{slugify label}}" class="collapse sentence collapse-{{slugify label}}" role="tabpanel" aria-labelledby="heading-{{slugify label}}">
+          <div class="">
+            <a href="https://twitter.com/intent/tweet?text={{getTweet column}}" class="twitter-link">
+            <span class="icon-twitter icon share-icon pull-right"></span>
+            </a>
+            {{{ getSentence column }}}
+          </div>
+        </div>
+      </div></script> <!-- Template: List (mobile) --> <script id=mobile-chart-template type=text/x-handlebars-template><h2>Så här mycket mer tjänar män än kvinnor över en livstid</h2>
+    <div id="sort-by" class="button-group">
+      <button class="btn btn-default sort active" data-sort-by="group">Sortera efter bransch</button>
+      <button class="btn btn-default sort" data-sort-by="value">Sortera efter löneklyfta</button>
+    </div>
+    <div class="sort-by-group">
+      {{#each groupedData }}
+        <h3>{{ key }}</h3>
+        {{#each values}}
+          {{> chartItem }}
+        {{/each}}
+    {{/each}}
+    </div>
+    <div class="sort-by-value hidden">
+      {{#each sortedData }}
+        {{> chartItem }}
+      {{/each}}
+    </div></script> <script id=mobile-story-template type=text/x-handlebars-template><h2>Fem fakta om ojämställda livslöner</h2>
+    {{#each .}}
+      <div class="item">
+        <!-- <div class="number">{{inc @index}}</div>-->
+        <div class="number count-up" id="story-count-up-{{@index}}" data-value="{{ value }}" data-suffix="{{ unit }}"></div>
+        <div class="text">{{{ text }}}</div>
+      </div>
+    {{/each}}</script> <div id=container> <div id=mobile-chart></div> <div id=mobile-story></div> <div id=viz class="shadow hidden-mobile"> <svg id=chart></svg> <div id=source> <div id=footnote>*) Eftersom de manligt dominerade utbildningarna har ett högre löneläge än de kvinnodominerade blir de totala löneskillnaderna för hela gruppen akademiker större än vad de är inom de olika utbildningsgrupperna var för sig.</div> <strong>Källa:</strong> <a href="http://www.saco.se/vara-fragor/rapporter/livslon---valja-studier-arbete-familj/" target=_blank>Livslön - välja studier, arbete, familj</a>, beräkningarna baseras på 2009 års löner och regelverk. </div> </div> <div id=nav class=hidden-mobile> <div id=controls class=shadow> <div class=info> <span class="icon-headphones icon"></span> <h3> Därför tjänar kvinnor mindre – lyssna på vår analys</h3> </div> <audio id=track controls> </audio> </div> <div id=story></div> </div> <div id=footer> <div id=message class=shadow> <span class="icon-bullhorn icon hidden-mobile"></span> <h3>Därför tycker Saco att:</h3> <div class=list-item> <div class=text>Kvinnor och män måste kunna <strong>göra karriär på lika villkor</strong>.</div> </div> <div class=list-item> <div class=text>Medvetna utbildningsval är avgörande. <strong>Snedrekryteringen till högskolan</strong> behöver brytas.</div> </div> <div class=list-item> <div class=text>Det måste vara möjligt att <strong>göra lönekarriär</strong> även i kvinnodominerade yrken.</div> </div> </div> <div id=sharing class="shadow hidden-mobile"> <span class="icon-thumbs-up icon hidden-mobile"></span> <h3 class=text>Dela och berätta om detta om du också vill ha jämställda livslöner</h3> <div class=share-icons> <a href=# class=facebook-link> <span class="icon-facebook icon share-icon"></span></a> <a class=twitter-link data-url="" data-counturl=http://jplusplus.se/u/saco_livslon/gender-barchart.html> <span class="icon-twitter icon share-icon"></span> </a> </div> </div> </div> </div>  <script src=scripts/559c1c53.vendor.js></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --> <script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');</script> <script type=text/javascript>// The breakpoint in px when to load the mobile version
+    var breakpoint = 950;
+
+    // App settings
+    var app = {};
+    app.selector = '#chart';
+    app.mobile = $('body').width() < breakpoint;
+    app.dataPath = 'data/data.tsv';
+    app.urlToShare = "http://www.saco.se/Forskning--kunskap/Vi-arbetar-med/lon-och-livslon/livslon-man-kvinnor/";</script> <script src=scripts/a90436ca.main.js></script> <script type=text/javascript src=//use.typekit.net/zxg8sjd.js></script> <script type=text/javascript>try { Typekit.load(); } catch (e) { console.log(e); }</script> <script>app.init();</script>  
